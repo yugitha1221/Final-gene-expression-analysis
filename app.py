@@ -269,5 +269,7 @@ def create_volcano_plot(results_df):
 
     return plot_path
 
-if __name__ == '__main__':
-   app.run(host='0.0.0.0', port=8000)
+
+port = int(os.environ.get("PORT", 5000))  # Render sets PORT dynamically
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=port)
