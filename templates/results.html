@@ -1,46 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preprocessing Results</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <style>
-        body {
-          font-family: Arial, sans-serif;
-          background-image: url('/static/images/bg2.png') !important;
-          background-size: cover;
-          background-position: center;
-          background-attachment: fixed;
-          margin: 0;
-          padding: 0;
-          height: 100vh; /* Make sure the body takes full height of the viewport */
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-      }
-      button {
-            width: auto;
-            padding: 12px 20px;
-            margin-top: 20px;
-            border-radius: 5px;
-            border: none;
-            font-size: 16px;
-            transition: 0.3s ease-in-out;
-            background-color: #3498db;
-            color: white;
-            cursor: pointer;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Preprocessing Results</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        button:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-        }
-    </style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #2c3e50;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    button {
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+      background-color: #3498db;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2c80b4;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body>
-    <h1>Preprocessing Results</h1>
-    <button onclick="window.location.href='/processed/{{ filename }}'">Download Processed File</button>
+
+  <h1>Preprocessing Results</h1>
+  <button onclick="window.location.href='/processed/{{ filename }}'">Download Processed File</button>
+
 </body>
 </html>
